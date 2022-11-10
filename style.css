@@ -1,0 +1,362 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Main Code */
+body {
+  background: linear-gradient(to right, #bfd7e3, #7e9ba9);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: calc(10px + 2vw);
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.578);
+  opacity: 1;
+}
+
+h1#title {
+  font-size: calc(25px + 0.5vw);
+  color: #323639;
+  padding: calc(2px + 1vw) 0;
+  border-bottom: calc(2px + 0.2vw) solid #323639;
+}
+
+/* Total Amount, Month/Year */
+section#summary {
+  display: flex;
+  margin: calc(10px + 0.5vw);
+}
+
+.total {
+  flex-grow: 1;
+  font-size: calc(15px + 2vw);
+  color: #b01f09;
+  align-self: center;
+}
+
+div.year-month_pick {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: 0.5vw;
+}
+
+button.choose-month {
+  background-color: #50626b;
+  color: #fefdf0;
+  border: none;
+  border-radius: 10px;
+  padding: calc(5px + 0.2vw) 1vw;
+  cursor: pointer;
+}
+
+button.choose-month:hover {
+  background-color: #fefdf0;
+  color: #50626b;
+}
+
+p.year-month_display {
+  background-color: #50626b;
+  color: #fefdf0;
+  font-size: calc(15px + 0.5vw);
+  padding: calc(5px + 0.2vw) 1vw;
+  margin: 0 5px;
+  border-radius: 10px;
+  align-self: center;
+}
+
+/* New Expense Form */
+section.expense {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+label.new-expense__header {
+  font-size: calc(15px + 1vw);
+  /* font-weight: 3vw; */
+  color: #323639;
+  border-bottom: calc(1px + 0.15vw) solid #323639;
+  padding: calc(2px + 1vw) 0;
+}
+
+form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+input,
+button#add {
+  background-color: #50626b;
+  color: #fefdf0;
+  border-radius: 10px;
+  border: calc(1px + 0.1vw) solid #50626b;
+  font-size: calc(15px + 0.3vw);
+  padding: calc(2px + 0.5vh) calc(2px + 0.5vw);
+  cursor: pointer;
+}
+
+input#expense-date {
+  margin: calc(5px + 1vw);
+}
+
+input#expense-item-price {
+  flex-grow: 1;
+  margin: calc(5px + 1vw);
+}
+
+input:hover,
+input:focus {
+  border: calc(1px + 0.1vw) solid #fefdf0;
+  box-shadow: 0 0 20px #fefdf0;
+  outline: none;
+}
+
+button#add {
+  font-size: calc(15px + 0.5vw);
+  width: calc(60px + 2vw);
+  margin: calc(5px + 1vw);
+  transition: transform 0.1s ease-in-out;
+}
+
+button#add:hover,
+button#add:focus {
+  background-color: #fefdf0;
+  box-shadow: none;
+  color: #50626b;
+  transform: scale(1.02);
+  border: calc(1px + 0.1vw) solid #50626b;
+}
+
+/* History: Category Buttons and List */
+h1.history-label {
+  font-size: calc(15px + 1vw);
+  /* font-weight: 3vw; */
+  color: #323639;
+  border-bottom: calc(1px + 0.15vw) solid #323639;
+  padding: calc(2px + 1vw) 0;
+}
+
+div.history-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 400px;
+}
+
+section.category-btns {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  max-width: 40vw;
+  margin-right: calc(20px + 0.5vw);
+}
+
+section.category-btns button {
+  background-color: #fefdf0;
+  border-radius: 10px;
+  color: #50626b;
+  border: calc(2px + 0.1vw) solid #50626b;
+  font-size: calc(12px + 0.5vw);
+  margin: calc(8px + 0.2vw) calc(3px + 0.2vw) 0 calc(3px + 0.2vw);
+  padding: calc(2px + 1vh) calc(5px + 1vw);
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+section.category-btns button.all {
+  background-color: #b01f09;
+  border: calc(2px + 0.1vw) solid #fefdf0;
+  color: #fefdf0;
+}
+
+section.category-btns button:hover,
+section.category-btns button:focus {
+  background-color: #50626b;
+  color: #fefdf0;
+  border: calc(2px + 0.1vw) solid #fefdf0;
+  transform: scale(1.04);
+}
+
+section.category-btns button:focus {
+  box-shadow: 0 0 25px antiquewhite;
+}
+
+section.category-btns button.all:hover,
+section.category-btns button.all:focus {
+  background-color: #fefdf0;
+  border: calc(2px + 0.1vw) solid #b01f09;
+  color: #b01f09;
+}
+
+ul.history-list {
+  flex-grow: 1;
+  max-width: 60vw;
+  border-left: calc(1px + 0.15vw) dashed #323639;
+}
+
+ul.history-list li {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: calc(10px + 0.2vw) 0;
+  font-size: calc(12px + 0.5vw);
+}
+
+li p:first-child {
+  background-color: #da4d37;
+  border-radius: 5px;
+  min-width: calc(20px + 15vw);
+  text-align: center;
+  padding: calc(2px + 1vh) calc(2px + 1vw);
+  margin: 0 calc(7px + 0.5vw);
+}
+
+li :nth-child(2) {
+  flex-grow: 1;
+  text-align: center;
+  margin-left: calc(10px + 2vw);
+  /* justify-items: stretch; */
+}
+
+li :nth-child(3) {
+  color: #8c2f21;
+  margin: 0 calc(5px + 0.5vw);
+}
+
+li :nth-child(4) {
+  margin: 0 calc(2px + 1vw);
+}
+
+button.delete {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}

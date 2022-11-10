@@ -1,0 +1,115 @@
+body {
+  margin: calc(5px + 5vw) calc(5px + 10vw);
+}
+
+h1#title {
+  font-size: calc(20px + 2vw);
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
+
+section#summary {
+  flex-flow: column wrap;
+}
+
+.total {
+  font-size: calc(20px + 4vw);
+  margin: calc(3px + 2vh) 0;
+}
+
+div.year-month_pick {
+  justify-content: center;
+}
+
+button.choose-month {
+  padding: calc(2px + 1.5vw) calc(2px + 2vw);
+}
+
+p.year-month_display {
+  font-size: calc(10px + 1.5vw);
+  padding: calc(2px + 1.5vw);
+}
+
+label.new-expense__header {
+  font-weight: bold;
+  font-size: calc(10px + 2vw);
+}
+
+form.expense-form {
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+input,
+button#add {
+  padding: 1vh 2vw;
+}
+
+input#expense-date,
+input#expense-item-price {
+  width: 60vw;
+  margin: calc(5px + 1vw) calc(5px + 1vw) 0 calc(5px + 1vw);
+}
+
+button#add {
+  font-size: calc(15px + 0.5vw);
+  width: calc(25px + 12vw);
+  margin: calc(5px + 1vw);
+  transition: transform 0.1s ease-in-out;
+  padding: 1vh 2vw;
+}
+
+div.history-container {
+  flex-flow: column wrap;
+  max-width: inherit;
+}
+
+h1.history-label {
+  font-size: calc(10px + 2vw);
+  font-weight: bold;
+}
+
+section.category-btns {
+  max-width: inherit;
+  padding-bottom: 1.5vh;
+  border-bottom: calc(1px + 0.15vw) solid #323639;
+  margin-right: 0;
+}
+
+section.category-btns button {
+  font-size: calc(12px + 1vw);
+  margin: calc(5px + 1vw) calc(2px + 0.5vw) 0 calc(2px + 0.5vw);
+  padding: calc(2px + 1vh) calc(5px + 1vw);
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+ul.history-list {
+  border-left: none;
+  max-width: 75vw;
+}
+
+ul.history-list li {
+  font-size: calc(10px + 1vw);
+  max-width: inherit;
+  margin-bottom: 1vh;
+  align-content: stretch;
+}
+
+li p:first-child {
+  background-color: #da4d37;
+  border-radius: 5px;
+  padding: calc(2px + 1vh) calc(2px + 1vw);
+  margin: 0;
+}
+
+li :nth-child(3) {
+  color: #8c2f21;
+  margin: 0.5vh 1vw;
+}
+
+li :nth-child(4) {
+  margin: 0.5vh 1vw;
+}

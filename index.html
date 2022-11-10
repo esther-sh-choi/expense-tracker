@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- width 500px or smaller -->
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:800px)"
+      href="style-800px.css"
+    />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <h1 id="title">Expense Tracker</h1>
+
+    <section id="summary">
+      <h1 class="total">$0.00</h1>
+      <div class="year-month_pick">
+        <button class="choose-month" id="previous-month">◀</button>
+        <p class="year-month_display"></p>
+        <button class="choose-month" id="next-month">▶</button>
+      </div>
+    </section>
+
+    <!-- Expense Form -->
+    <section class="expense">
+      <label for="expense-form" class="new-expense__header">New Expense</label>
+      <form class="expense-form">
+        <input type="date" name="expenseDate" id="expense-date" required />
+        <input
+          type="text"
+          name="ccp"
+          id="expense-item-price"
+          placeholder="category: content $price"
+          required
+        />
+        <button name="add" id="add">ADD</button>
+      </form>
+    </section>
+
+    <!-- History -->
+    <h1 class="history-label">History</h1>
+    <div class="history-container">
+      <section class="category-btns">
+        <button class="all">ALL</button>
+      </section>
+      <ul class="history-list"></ul>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
